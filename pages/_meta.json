@@ -1,0 +1,34 @@
+{
+  "*": {
+    "type": "page"
+  },
+  "index": {
+    "title": "Homepage",
+    "display": "hidden",
+    "theme": {
+      "breadcrumb": true,
+      "footer": false,
+      "sidebar": false,
+      "typesetting": "default",
+      "toc": true,
+      "pagination": true
+    }
+  },
+  "docs": {
+    "title": "文档"
+  },
+  "blog": {
+    "title": "博客"
+  },
+  "More": {
+    "title": "更多",
+    "type": "menu",
+    "items": {
+      "github": {
+        "title": "More",
+        "href": "https://github.com",
+        "newWindow": true
+      }
+    }
+  }
+}

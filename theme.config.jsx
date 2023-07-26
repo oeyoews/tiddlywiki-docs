@@ -10,8 +10,8 @@ export default {
     text: (
       <span>
         MIT {new Date().getFullYear()} ©{" "}
-        <a href="https://nextra.site" target="_blank">
-          Nextra
+        <a href="https://github.com" target="_blank">
+          oeyoews
         </a>
         .
       </span>

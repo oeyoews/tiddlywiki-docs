@@ -22,14 +22,14 @@ export default {
   sidebar: {
     toggleButton: true,
   },
-  banner: {
-    key: "2.0-release",
-    text: (
-      <a href="https://nextra.site" target="_blank">
-        🎉 Nextra 2.0 is released. Read more →
-      </a>
-    ),
-  },
+  // banner: {
+  //   key: "2.0-release",
+  //   text: (
+  //     <a href="https://nextra.site" target="_blank">
+  //       🎉 Nextra 2.0 is released. Read more →
+  //     </a>
+  //   ),
+  // },
   head: () => {
     const { asPath, defaultLocale, locale } = useRouter();
     const { frontMatter } = useConfig();

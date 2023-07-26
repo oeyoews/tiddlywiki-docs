@@ -39,7 +39,7 @@ export default {
     return (
       <>
         <meta property="og:url" content={url} />
-        <meta property="og:title" content={frontMatter.title || "Nextra"} />
+        <meta property="og:title" content={frontMatter.title || "TiddlyWiki"} />
         <meta
           property="og:description"
           content={frontMatter.description || "The next site builder"}
@@ -68,7 +68,7 @@ export default {
   },
   logo: (
     <>
-      <span style={{ marginLeft: ".4em", fontWeight: 800 }}>Nextra Docs</span>
+      <span style={{ marginLeft: ".4em", fontWeight: 800 }}>TiddlyWiki 中文入门教程</span>
     </>
   ),
   // logoLink: "https://github.com/oeyoews/next-docs",

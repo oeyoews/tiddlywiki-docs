@@ -1,0 +1,107 @@
+import { Callout } from 'nextra/components'
+import { Tabs, Tab } from 'nextra/components'
+
+import { Cards, Card } from 'nextra/components'
+
+import { FileTree } from 'nextra/components'
+
+import Image from 'next/image'
+
+## Test
+
+| left   | center | right |
+| :----- | :----: | ----: |
+| foo    |  bar   |   baz |
+| banana | apple  |  kiwi |
+
+<table>
+  <thead>
+    <tr>
+      <th>Country</th>
+      <th>Flag</th>
+    </tr>
+  </thead>
+  <tbody>
+    {[
+      { country: 'France', flag: '🇫🇷' },
+      { country: 'Ukraine', flag: '🇺🇦' }
+    ].map(item => (
+      <tr key={item.country}>
+        <td>{item.country}</td>
+        <td>{item.flag}</td>
+      </tr>
+    ))}
+  </tbody>
+</table>
+
+Inlined syntax highlighting is also supported `let x = 1{:jsx}` via:
+
+$$E = mc^2$$
+
+The **Pythagorean equation**: $a=\sqrt{b^2 + c^2}$.
+
+<Image src="/next.svg" alt="Hello" width={500} height={500} />
+
+```js /useState/ copy
+import { useState } from 'react'
+
+function Counter() {
+  const [count, setCount] = useState(0)
+  return <button onClick={() => setCount(count + 1)}>{count}</button>
+}
+```
+
+```js {1,4-5}
+import { useState } from 'react'
+
+function Counter() {
+  const [count, setCount] = useState(0)
+  return <button onClick={() => setCount(count + 1)}>{count}</button>
+}
+```
+
+<FileTree>
+  <FileTree.Folder name="pages" defaultOpen>
+    <FileTree.File name="_meta.json" />
+    <FileTree.File name="contact.md" />
+    <FileTree.File name="index.mdx" />
+    <FileTree.Folder name="about">
+      <FileTree.File name="_meta.json" />
+      <FileTree.File name="legal.md" />
+      <FileTree.File name="index.mdx" />
+    </FileTree.Folder>
+  </FileTree.Folder>
+</FileTree>
+
+<Cards>
+  <Card icon="" title="Callout" href="/docs/guide/built-ins/callout" />
+  <Card icon="" title="Tabs" href="/docs/guide/built-ins/tabs" />
+  <Card icon="" title="Steps" href="/docs/guide/built-ins/steps" />
+</Cards>
+
+<Callout emoji="💡" type="info">
+  **Space Invaders** is a 1978 shoot 'em up arcade game developed by Tomohiro
+  Nishikado.
+</Callout>
+
+<Tabs items={['pnpm', 'npm', 'yarn']}  defaultIndex="3">
+  <Tab>**pnpm**: Fast, disk space efficient package manager.</Tab>
+  <Tab>**npm** is a package manager for the JavaScript programming language.</Tab>
+  <Tab>**Yarn** is a software packaging system.</Tab>
+</Tabs>
+
+```tsx showLineNumbers filename="about.tsx"
+import { Callout } from 'nextra/components'
+import { Tabs, Tab } from 'nextra/components'
+
+<Callout emoji="💡" type="info">
+  **Space Invaders** is a 1978 shoot 'em up arcade game developed by Tomohiro
+  Nishikado.
+</Callout>
+
+<Tabs items={['pnpm', 'npm', 'yarn']}>
+  <Tab>**pnpm**: Fast, disk space efficient package manager.</Tab>
+  <Tab>**npm** is a package manager for the JavaScript programming language.</Tab>
+  <Tab>**Yarn** is a software packaging system.</Tab>
+</Tabs>
+```

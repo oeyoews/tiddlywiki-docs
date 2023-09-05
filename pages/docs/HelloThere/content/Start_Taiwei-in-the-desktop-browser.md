@@ -1,0 +1,33 @@
+---
+title: 开始_桌面端浏览器中的太微
+---
+
+## 在桌面端使用你的浏览器作为太微的主力工具吧！
+
+TiddlyStow（创建）、Timimi（回写保存文件）、 FSA Uploader（太微插件，基于File System Access API的上传器）、Kopia（定时备份）
+
+
+**使用方式：**
+
+1. 创建一个文件夹存储所有的TiddlyWiki文档，这个文件夹可以当做太微文件列表，然后使用Kopia定时备份这个文件夹，Timimi回写文件数据，Tiddlystow用已有的太微模板新建太微。
+1. 像Word文档一样使用，你可以使用[TiddlyStow](https://twpub-book.netlify.app/tiddlystow.html)中的TiddlyWiki模板快速地创建太微文档并开始记录内容。
+
+## TiddlyWiki开始，使用TiddlyStow创建或保存你TiddlyWiki文档
+
+
+**TiddlyStow链接：**<https://twpub-book.netlify.app/tiddlystow.html>
+
+
+TiddlyStow可以作为在桌面浏览器中使用TiddlyWiki的起点，你可以使用侧边栏中的模板创建TiddlyWiki文档。其它三个组件分别为Timimi（保存与备份）、FSA Uploader（自动上传图片到本地文件夹）、kopia（定时备份）；在没有任何用于保存TiddlyWiki的工具的情况下，点击TiddlyWiki中的保存变更按钮你的浏览器将下载一份更新后的TiddlyWiki。
+
+你可以把创建的TiddlyWiki当做在任意位置可以阅读但只能在电脑上使用浏览器修改的Word文档使用。
+
+仅支持的桌面浏览器：`Edge/Chrome版本大于86`，`Safari版本大于15.2`，`Opera版本大于72`。
+
+[img[TiddlyStow预览.png]]
+
+[img[TidGi-HTML预览.png]]
+
+
+
+

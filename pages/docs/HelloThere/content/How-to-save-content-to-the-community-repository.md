@@ -1,0 +1,8 @@
+---
+title: 如何保存内容到社区仓库里
+---
+
+太微是去中心化的知识库，如果你现在是在浏览器里编辑，当点击保存按钮时，太微会自动复制一份完整知识库，并将你的编辑结果放在里面，保存到你的电脑本地（不会保存到社区的中心化的知识仓库里）。这样产生的编辑结果只有你自己能看到，你可以随便修改[部署版本的知识库](https://tw-cn.netlify.app)来玩而不会影响 [Github 上真正的知识库](https://github.com/tiddly-gittly/TiddlyWiki-Chinese-Tutorial/tree/master/tiddlers)，这防止了有人误操作修改了社区知识仓库的内容。
+
+如果你希望贡献内容到社区 Github 知识仓库里，请点击链接跟随[我们 Github 仓库里的几步操作](https://github.com/tiddly-gittly/TiddlyWiki-Chinese-Tutorial#%E8%B4%A1%E7%8C%AE%E5%86%85%E5%AE%B9)，以获得更新权限。
+

@@ -1,0 +1,24 @@
+---
+title: 显示行号、高亮当前行、设置编辑区高度
+---
+
+安装官方的codemirror
+
+控制面板 -设置 -CodeMirror，找到这两个选项启用他们
+
+* Enable line numbers：设置打开显示行号
+* Highlight active line：设置高亮活动行
+
+
+
+编辑区高度，编辑这个条目：
+$:/plugins/tiddlywiki/codemirror/lib/codemirror.css
+
+找到这个样式所在行
+
+```
+.CodeMirror-lines
+min-height:1px
+```
+
+min-height修改为80px即可

@@ -1,0 +1,22 @@
+---
+title: 用自动化对抗惰性
+---
+
+<div id="tiddlywiki-save-graph">
+ {{计算机缓存层级图}}
+</div>
+
+笔记系统作为N级缓存，关键是入更低级的缓存，才能更快地参与辅助决策，这需要大量的学习、回顾。
+
+但是你真的会常常回顾自己记下的数百张闪念卡片、复习整理出的富含链接的永久笔记/知识笔记/提取笔记/Area笔记/知识图谱笔记吗？
+
+除了依靠内在的驱动力去做整理、复习，我们也需要一个系统来辅助我们，作为我们外置的意志力，减轻知识入脑的压力。
+
+<style>
+#tiddlywiki-save-graph {
+  float: right;
+}
+.tamasha-slide-content #tiddlywiki-save-graph {
+	line-height: 1.2rem !important;
+}
+</style>

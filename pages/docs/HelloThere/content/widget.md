@@ -1,0 +1,23 @@
+---
+title: 微件
+---
+
+微件（Widget，也译为小工具）是页面渲染的基本组成部分，页面上的列表、标题、链接就是由列表微件、标题微件、链接微件组成的，详见[官方介绍-小工具](http://tw5-zh-hans.tiddlyspot.com/#Widgets)。
+
+你可能会感到奇怪，你输入的明明只是 `* !! [[]]` 这样的维基语法，为什么就成了微件呢？这是靠太微核心部分基于编译原理的部分来转换的了。
+
+除了用维基语法创造出微件，你也可以直接使用微件，例如 `<$list filter="[tag[基础知识]sort[title]]"/>`：
+
+<$list filter="[tag[基础知识]sort[title]]"/>
+
+如果想让结果不挤在一起，就加上 div 标签，或者 `<li><$text text=<<currentTiddler>>/></li>` 标签
+
+```html
+<$list filter="[tag[基础知识]sort[title]]">
+	<div><$text text=<<currentTiddler>>/></div>
+</$list>
+```
+
+<$list filter="[tag[基础知识]sort[title]]"><div><$text text=<<currentTiddler>>/></div></$list>
+
+<$list filter="[tag[基础知识]sort[title]]"><li><$text text=<<currentTiddler>>/></li></$list>

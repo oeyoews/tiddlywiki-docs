@@ -1,0 +1,24 @@
+---
+title: 根据条件展示内容
+---
+
+Reveal 的 default 参数是一个值，不过我们可以通过 `{{{ }}}` 语法来使用筛选器表达式。
+
+```xml
+<$reveal  default={{{ [] }}} >
+	
+</$reveal>
+```
+
+此外 list 可以直接传入筛选器表达式。 
+
+```xml
+<$list filter="[all[current]backlinks[]first[]sort[title]]">
+	满足条件时才会展示
+</$list>
+
+<!-- show search bar if there are at least one template -->
+<$list filter="[all[tiddlers+shadows]tag[$:/tags/TextEditor/Template]!is[draft]count[]compare:number:gt[0]]">
+  <$edit-text tiddler="$:/state/search-template-list/input" default="" placeholder="search template name" tag=input class="linonetwo-template-list-search" />
+</$list>
+```

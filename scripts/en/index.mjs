@@ -39,13 +39,7 @@ readdirAsync(tiddlersDir)
           if (captionMatch) {
             const caption = captionMatch[1];
             frontmatter = `---
-title: ${caption}
----
-
-`;
-          } else {
-            frontmatter = `---
-title: ${file};
+title: '${caption}'
 ---
 
 `;
@@ -53,8 +47,8 @@ title: ${file};
         }
 
         // 写入到content目录中
-        const outputFile = path.join(contentDir, sanitizedFileName);
-        fs.writeFileSync(outputFile, frontmatter + content);
+        const outputFile = path.join(contentDir, sanitizedFileName + ".md");
+        frontmatter && fs.writeFileSync(outputFile, frontmatter + content);
       }
     }
     console.log("处理完成");

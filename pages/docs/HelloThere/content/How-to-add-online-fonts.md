@@ -1,0 +1,68 @@
+---
+title: 如何添加在线字体
+---
+
+video-link: <https://www.bilibili.com/video/BV1K84y1A7aJ/>
+
+## 添加条目
+
+怎么更新的呢？首先去[谷歌字体网](https://fonts.google.com/)找一款喜欢的。
+
+然后新建一个条目，标题随便写，或者写某种字体类型也可以，打上标签`$:/tags/RawMarkup`，里面的正文一般是下面的格式。
+
+```
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@200&display=swap" rel="stylesheet">
+```
+找到网站右边复制一段类似上面的代码放到条目正文里。然后
+
+* 在控制面板-视觉外观-主题调整-设置-字型里使用这个字体名
+* 或者直接去[$:/themes/tiddlywiki/vanilla/settings/fontfamily](#%24%3A/themes/tiddlywiki/vanilla/settings/fontfamily)这个条目里添加上你选择的格式放在最前面。比如我的是`'Noto Serif SC', serif;`。保存刷新就可以看到效果了。
+
+不过我发现上面网站里没几款字体。楷体都没找到，只有这种宋体或者衬线体。另一款比较黑的，对英文支持不太好。英文根本就不能阅读了，简直是草书。目前先用这个字体吧，配合整体的绿色，感觉还是很小清新的。
+
+[霞鹜文楷](https://github.com/lxgw/LxgwWenKai)
+
+这是一个开源字体，效果还不错。配置如下。
+
+```
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-lite-webfont@1.1.0/style.css" />
+```
+
+和上面描述的一样，需要加上`$:/tags/RawMarkup`标签，正文是一个link链接，直接复制就可以。type设置为`text/html`。再到[$:/themes/tiddlywiki/vanilla/settings/fontfamily](#%24%3A/themes/tiddlywiki/vanilla/settings/fontfamily)最前面添加`"LXGW WenKai Lite";`。然后需要在标签层级里把`霞鹜文楷`（或者你设置的标题）放到最前。
+
+不放到最前是看不到效果的。点开标签就可以看到层级。
+
+一些其他的网站也可以搜索到。
+
+<https://www.npmjs.com/search?q=lxgw>
+
+<https://www.jsdelivr.com/?query=lxgw>
+
+这样使用字体最为快捷，不过断网就用不了了。如果想折腾离线版字体，可以学习[如何内嵌字体](#%E5%A6%82%E4%BD%95%E5%86%85%E5%B5%8C%E5%AD%97%E4%BD%93)。
+
+## 修改设置
+
+最后记得把字体名字填到 控制面板-视觉外观-主题调整-字形 里面，然后要刷新浏览器，不生效记得看看右键开发者工具-网络，里面字体文件网络加载成功没有
+
+编辑器字体则是改那个 控制面板-视觉外观-主题调整-编辑器字形。还有个代码字形，是指预览状态下的代码块里的字体。
+
+
+## 常见问题
+
+### 如果你修改编辑器字形后不生效，可能因为要安装codemirro插件才行。
+
+如果你未安装codemirro插件，可能是因为你使用了太微空白版在从头配置一切，如果你是第一次使用太微，建议还是用[TidGi太记](#TidGi%E5%A4%AA%E8%AE%B0)，而不是从头配起，以免占用你本可以用于工作学习娱乐的宝贵时间。
+
+### 装到电脑上行不行
+
+其实这字体没必要装到太微里面，只要电脑上装了就行，然后这个就是在不同用户电脑上看最左边的电脑上有没有安装，如果没安装就往右再试一个。
+
+不过如果希望发布为博客后，读者也看到相应字体，就需要装到太微里了。
+
+### 字型和代码字型设置这里，为什么每一栏都有这么多字体？
+
+如果像编辑器字型一样，字型和代码字型都只留一种，是否会有影响？
+
+如果必须保留多款，前后排序是否有讲究？
+
+可以只保留一个，有多个时排最左边的最优先，这个其实就是会填到 CSS 的 font-family 里面，学习一下 CSS 里字体的用法就知道了。

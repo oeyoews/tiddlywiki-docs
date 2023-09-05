@@ -2,4 +2,6 @@
 title: 排查问题
 ---
 
-type: text/vnd.tiddlywiki
+QQ群里常问的bug（但一时又没空去解决的）可以放到这里。
+
+具体请看下面「文件夹中的文件」

@@ -1,0 +1,29 @@
+---
+title: Tooltips悬浮工具提示
+---
+
+【卡片集】
+
+* Author：<https://tooltips.tiddlyhost.com/>
+* 描述：悬浮工具提示，拖动[balloon.css](#balloon.css)到你的wiki导入，并为此条目添加`$:/tags/Stylesheet`标签即可全局使用。
+* 文档和例子：<https://tooltips.tiddlyhost.com/>
+
+
+For details on how use the balloon.css see the original repo
+
+* demo: <https://kazzkiq.github.io/balloon.css/>
+* code: <https://github.com/kazzkiq/balloon.css>
+
+
+```
+条目标题：balloon.css（任意）
+标签：$:/tags/Stylesheet
+条目类型：text/css
+```
+
+
+单功能条目卡片内容：
+
+<$let selected-tiddler="balloon.css">
+	<$macrocall $name="code" language={{{[<selected-tiddler>get[type]]}}} src={{{[<selected-tiddler>get[text]]}}} caption={{{[<selected-tiddler>get[title]]}}} />
+</$let>

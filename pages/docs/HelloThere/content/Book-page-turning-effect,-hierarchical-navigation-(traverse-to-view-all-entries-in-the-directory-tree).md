@@ -1,0 +1,30 @@
+---
+title: 书本翻页效果、分层导航（遍历查看目录树中的所有条目）
+---
+
+【卡片集】
+
+* Author：kookma
+* 描述：分层导航，或者称为简单导航是kookma/toc中的一个宏，可以实现遍历查看目录树的所有条目，点击条目底下的next按钮，就会实现像书籍一样的翻页功能。翻页顺序为文件目录中显示的顺序。
+* 使用方法：阅读下列操作说明。
+
+
+```
+条目标题：分层导航或者简单导航（随意）
+依赖插件：$:/plugins/kookma/toc
+标签：$:/tags/ViewTemplate
+条目类型：text/vnd.tiddlywiki
+```
+按照说明安装插件并创建条目。
+
+```html
+\import [all[tiddlers+shadows]tag[$:/tags/Macro/Toc]]
+<!-- customized class is used for buttons -->
+<style>
+.colorful-btns{color:dodgerblue;}
+</style>
+<!-- Call navigator -->
+<<multilevel-toc-navigation tag:"contents" close:"yes" class:"kk-toc-navigation colorful-btns" stateTiddler:"20210328143800">>
+```
+位于条目最后的`multilevel-toc-navigation`宏中的tag字段的值"contents"，`<<multilevel-toc-navigation tag:"contents">>`
+将它改成你的文件夹条目，比如Index子文件夹条目。然后你就可以在这个文件夹条目以及子文件夹条目底部看到蓝色next按钮，这就说明成功了。

@@ -1,0 +1,20 @@
+---
+title: 默认隐藏侧边栏设置
+---
+
+`$:/state/sidebar`条目用于保存侧边栏隐藏显示状态。
+
+此条目内容一般有两种选项，“no”为隐藏，“yes”为显示。
+
+也可以根据下面的内容创建一个条目，实现仅在移动端模式下隐藏侧边栏并置顶标题。
+
+```
+tags: $:/tags/StartupAction
+title: $:/config/neotw/mobile-setup
+type: text/vnd.tiddlywiki
+
+<$list filter="[[$:/info/browser/is/mobile]get[text]else[no]match[yes]]"> 
+<$action-setfield $tiddler="$:/themes/tiddlywiki/vanilla/options/stickytitles" text="no"/>
+<$action-setfield $tiddler="$:/state/sidebar" text="no"/>
+</$list>
+```

@@ -15,6 +15,8 @@ type: text/vnd.tiddlywiki
 
 ### JS 高级插件
 
+可以阅读[太微原理](#%E5%A4%AA%E5%BE%AE%E5%8E%9F%E7%90%86)里的一些指南。
+
 因为太微本身的 API 文档不完善，而且没有原生的 TS 类型。所以目前的学习主要靠阅读其它插件的代码，来了解写法。
 
 小伙伴们也在把 API 用法整理到[TW5-Typed](https://github.com/tiddly-gittly/TW5-Typed)里，方便使用 TS 开发 JS 插件。

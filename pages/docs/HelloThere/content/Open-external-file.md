@@ -2,6 +2,8 @@
 title: 打开外部文件
 ---
 
+video-link: <https://www.bilibili.com/video/BV1Ah411c7rc>
+
 在桌面端应用里，你可以打开外部文件。
 
 ## 太记
@@ -14,13 +16,29 @@ title: 打开外部文件
 [ext[open:///Users/linonetwo/Desktop]]
 ```
 
+```
+.
+├─plugins
+│  └─github-external-image
+├─tiddlers
+├─files
+└─tiddlywiki.info
+```
+
 也可以是以 `./` 开头的相对路径，表示文件位置相对于知识库文件夹，例如我们常常在 `tiddlywiki.info` 同一层会有一个 `files` 文件夹用于放大文件附件：
 
 ```
 [ext[open://./files/ItonNote Desktop.png]]
 ```
+这里引用的''图片名称需要是英文名，中文名不行''，显示不出来。具体可见[b站上的视频](https://www.bilibili.com/video/BV1qV4y1L7UP/?share_source=copy_web&vd_source=ad336ef0278153bd16bdab5eac42fdfa&t=4337)<<fnote "视频很粗糙，简单看下操作就行。">>。
 
-太记不使用传统的 `file://` 开头，因为 Electron 框架做了一些保证用户安全的限制。
+你也可以使用 `file://` 访问外部文件：
+
+```
+[ext[file://<文件或文件夹路径>]]
+```
+路径可以是相对路径，也可以是绝对路径（目前好像不支持绝对路径）。绝对路径可以用斜杠或反斜杠，例如`file://C:\Users\Snowy\Downloads`。
+
 
 ## TiddlyWikiDesktop
 
@@ -29,3 +47,5 @@ title: 打开外部文件
 ```
 [ext[file://~/Desktop/ItonNote Mobile.png]]
 ```
+
+在太记里想要直接显示外部图片，并把图片归类到文件夹里的话，可以参考[让导入的图片放在特定目录中](#%E8%AE%A9%E5%AF%BC%E5%85%A5%E7%9A%84%E5%9B%BE%E7%89%87%E6%94%BE%E5%9C%A8%E7%89%B9%E5%AE%9A%E7%9B%AE%E5%BD%95%E4%B8%AD)。其他pdf文件也是类似。唯一的是音频文件不好处理，可能会出错。

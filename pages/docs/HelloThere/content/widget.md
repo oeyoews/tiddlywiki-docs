@@ -21,3 +21,5 @@ title: 微件
 <$list filter="[tag[基础知识]sort[title]]"><div><$text text=<<currentTiddler>>/></div></$list>
 
 <$list filter="[tag[基础知识]sort[title]]"><li><$text text=<<currentTiddler>>/></li></$list>
+
+<$macrocall $name="alert" type="primary" src="同筛选器一样，微件也是一定要掌握的，但后续同样有更高级的用法需要放到高级知识里去介绍。" class="bg-transparent"/>

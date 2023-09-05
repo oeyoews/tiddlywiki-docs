@@ -1,0 +1,7 @@
+---
+title: 如何给太微免费部署的博客添加评论区
+---
+
+video-link: <https://www.bilibili.com/video/BV1Ea4y1M7Xb/>
+
+太微（Tiddlywiki）可以通过 Giscus 插件给自己的笔记添加在线评论区，需要 github 账号以及把知识库同步到 github 备份才能使用，在 CPL 里搜 comment 就可以搜到。这个功能应该一直都会是免费的。

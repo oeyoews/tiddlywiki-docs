@@ -21,6 +21,7 @@ title: 筛选器
 首先阅读[中文官方文档的教程](https://bramchen.github.io/tw5-docs/zh-Hans/#Filters)。
 
 1. [TiddlyWiki Filter Expression：释放 TiddlyWiki 十倍威力的工具 @闷声](https://zhuanlan.zhihu.com/p/346647657)
+1. [筛选器类](#%E7%AD%9B%E9%80%89%E5%99%A8%E7%B1%BB)
 
 ## 筛选器相关的概念
 
@@ -28,13 +29,6 @@ title: 筛选器
     * 运行逻辑由一个或多个[逻辑步骤（Step）](https://bramchen.github.io/tw5-docs/zh-Hans/#Filter%20Step)组成
     * 运行逻辑前面可以加上[+-=~等前置码（prefix）](https://bramchen.github.io/tw5-docs/zh-Hans/#Filter%20Expression)
 
-## 筛选器中使用变量
+高级用法详见[宏变量筛选器嵌入连用](#%E5%AE%8F%E5%8F%98%E9%87%8F%E7%AD%9B%E9%80%89%E5%99%A8%E5%B5%8C%E5%85%A5%E8%BF%9E%E7%94%A8)。
 
-* `[xxx]`就是指"xxx"字符串
-* `<xxx>`是指xxx变量
-* `{xxx}`是指xxx条目的text字段
-* `{xxx!!yyy}`是指xxx条目的yyy字段
-* `{!!yyy}`是指当前条目的yyy字段
-* `[<xxx>!match[]]`是判断当前变量存不存在
-
-详见[变量在不同情况下的多种写法](#%E5%8F%98%E9%87%8F%E5%9C%A8%E4%B8%8D%E5%90%8C%E6%83%85%E5%86%B5%E4%B8%8B%E7%9A%84%E5%A4%9A%E7%A7%8D%E5%86%99%E6%B3%95)和[嵌入在不同情况下的多种写法](#%E5%B5%8C%E5%85%A5%E5%9C%A8%E4%B8%8D%E5%90%8C%E6%83%85%E5%86%B5%E4%B8%8B%E7%9A%84%E5%A4%9A%E7%A7%8D%E5%86%99%E6%B3%95)。
+<$macrocall $name="alert" type="primary" src="本条目同时添加了两个标签，基础知识和高级知识。因为筛选器比较特别，筛选器的基础知识，比如像tags标签是一定要掌握的，但像一些listtops筛选器，就很复杂了，就需要放到高级知识里去理解了。" class="bg-transparent"/>

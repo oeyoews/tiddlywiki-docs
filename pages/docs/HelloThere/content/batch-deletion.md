@@ -14,4 +14,4 @@ title: 批量删除
 
 # 使用插件
 
-此外也可以使用[TW-Commander](#TW-Commander)插件来批量删除、增删字段。
+此外也可以使用[TW-Commander](TW-Commander：批量操作条目)插件来批量删除、增删字段。

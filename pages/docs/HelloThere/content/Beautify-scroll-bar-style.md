@@ -1,0 +1,47 @@
+---
+title: 美化滚动条样式
+---
+
+【卡片集】
+
+* Author：kookma
+* 描述：滚动条样式，浏览器垂直滚动条样式。支持的浏览器：Firefox，Chrome, Edge
+* 使用方法：按下列提示创建条目，保存后即可显示效果。
+
+
+```
+条目标题：mysettings/scrollbars
+标签：$:/tags/Stylesheet
+条目类型：text/vnd.tiddlywiki
+```
+
+```css
+\rules only filteredtranscludeinline transcludeinline macrodef macrocallinline html
+
+html {
+  --scrollbarBG: <<color page-background>>;
+  --thumbBG: <<color sidebar-tiddler-link-foreground>>; /*other candidate colors: foreground, sidebar-tiddler-link-foreground */
+}
+
+/* only for Twilight palette use <<color sidebar-muted-foreground>> */
+
+/* Works on Firefox */
+* {
+  scrollbar-width: thin;
+}
+/* for Chrome, Edge */
+::-webkit-scrollbar,
+  scrollbar-width {
+  width: 8px;
+  height:8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--scrollbarBG);
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 6px;
+  border: 1.5px solid var(--scrollbarBG);
+  background-color: var(--thumbBG) ;
+}
+```

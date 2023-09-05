@@ -1,0 +1,17 @@
+---
+title: undefined widget xxx
+---
+
+例如 `undefined widget 'dynannotate'`
+
+*常见原因
+
+没有从 [CPL](安装CPL插件源) 安装插件，而是自己通过拖动等方式安装，容易出现这个问题。
+
+从 CPL 安装你刚装的插件一般就能解决，而且一劳永逸，以后不容易再出现这个问题。
+
+*根本原因
+
+有一个提供 xxx （例如例子里的 dynannotate） [微件](#%E5%BE%AE%E4%BB%B6) 的插件没有安装。
+
+可以去 CPL 搜索这个 xxx （例如例子里的 dynannotate），来补充安装。如果 CPL 里没搜到，就到[官方插件源](使用插件源)去安装。

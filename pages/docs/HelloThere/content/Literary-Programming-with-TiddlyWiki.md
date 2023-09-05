@@ -1,0 +1,47 @@
+---
+title: 文学编程与TiddlyWiki
+---
+
+TiddlyWiki像是一种编程与写作的工具，更是一种“开发框架/知识管理操作系统”。
+
+> 1983年，Donald Knuth提出了一种新的编程范型，称为“文学编程”。他说文学编程是“一种将编程语言与文档语言相结合的方法，从而使编写的程序比只用高级语言编写的程序更强大、更便捷、更易维护，而且可以说更有趣。主要思想是把程序当作文学作品，用人的语言而不是计算机的”。
+
+即经过编程后的文学或笔记作品。因为TiddlyWiki是以写作为目标的工具，而不是编程为目标的工具，所以编程文学这个词可能比较合适。此外Jupyter notebook使用MD和anyCode编写文档和代码完成编程目标，而TiddlyWiki使用[WikiText写作](WikiText笔记与写作（进一步的可能）)和[Wiki编程](Wiki编程的定义)组织和编写文档完成写作目标。
+
+## 早期：Donald Knuth 在 1984 带来 Literate Programming 的概念
+
+Leo Editor 等编辑器忠实还原了这个体验，将任意业务代码和注释、文档混写在一起，并执行代码部分、将文档部分变成文档站。
+
+更现代的[nbdev](https://github.com/fastai/nbdev/)实现这一编程范式的方式则更为我们所熟悉一些，它长得就像「Jupyter notebook」：
+
+## 科学计算和数据科学：Mathematica 在 1988 年引入了笔记本界面
+
+更广为人知人用的是 IPython → IPython Notebook → Jupyter notebook → Jupyter Lab ，自从 2014 年 Fernando Pérez and Brian Granger 从 IPython 中建立起 IPython Notebook，越来越多的人爱上了这种混合代码和文档的写作方式。
+
+这类笔记本应用通过缓存之前步骤结果，允许从程序逻辑中的断点处出发尝试新的方案，笔记本让使用者能更快地进行树状的实验迭代。这种编程/实验方式称为「探索式编程」（exploratory programming）。
+
+在实验上的优势使得 Jupyter 笔记本应用在过去的一个年代里有了爆发性的增长。
+
+## 互动演示：MDX 和 Tid
+
+[MDX](https://mdxjs.com/) 允许作者在 Markdown 文本里嵌入 JSX 组件，从而使用 HTML custom element、ReactJS、VueJS 等任意使用 JSX 描述的组件。MDX 是组件化时代的新型 Markdown。
+
+[Tid](https://zhuanlan.zhihu.com/p/140473235) 需要在太微中使用，允许用户在文本中插入通过插件定义的互动组件，并允许执行嵌入文档中的代码。
+
+这类系统还有很多，它们都允许文档中含有可执行的部分。
+如果将文式编程的定义退化到「放入非文本的可执行的微件就算文式编程」，那么 Notion 和 Coda 或许也算文式编程。不过 MDX 和 Tid 是基于文本而非 JSON 的，用户可以查看和理解其中的代码部分并在文本编辑器里做微调修改，更多地保留了文式编程的编写方式吧。
+
+## 为什么传统的文式编程消失，新的文式编程不断简化
+
+其实用宏和JSDoc就能基本替代传统的文式编程了：
+
+1. 宏允许我们在编译期复用代码，类似文式编程中的嵌入Transclusion
+1. JSDoc可以在代码里写 Markdown，类似于文式编程里的代码笔记混写。
+
+而简化后的代码和文档混写的笔记本应用能与 IDE 分庭抗礼，甚至[内置到VSCode中与代码模式共存](https://code.visualstudio.com/blogs/2021/11/08/custom-notebooks)，是因为其断点续播的特性很适合实验阶段。工程阶段大家还是会继续使用 IDE，让笔记本和编程环境占有不同的两个生态位。
+
+* 转自[林一二的wiki](https://onetwo.ren/wiki/#:%E6%96%87%E5%BC%8F%E7%BC%96%E7%A8%8B)
+* 也可访问[知乎版](https://www.zhihu.com/question/26978956/answer/2349585817)
+* [literate programming维基链接（英文）](https://en.wikipedia.org/wiki/Literate_programming)
+
+我对这一概念的理解是，代码更容易写成一长串的内容，不加以区分，可以像读书一样，而不是听人讲话那种断断续续的，但维护起来不太容易。

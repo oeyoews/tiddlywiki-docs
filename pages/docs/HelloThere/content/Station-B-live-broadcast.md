@@ -1,0 +1,26 @@
+---
+title: B站直播
+---
+
+\define sv-exclude-tags() B站直播 任务 done
+
+每周六晚上9点在B站[林一二的直播间](http://live.bilibili.com/823307)有交流会。[QQ群](社区建设)里会发腾讯会议链接，可以加入分享自己最近的感想。
+
+在没人分享时，林一二会慢慢分享太微的各种基础功能和用法，并形成录播。
+
+<$macrocall $name=table-dynamic caption="待分享的主题列表" filter="[tag[B站直播]tag[任务]]-[tag[done]]" fields="title tags" class="w-100"/>
+
+<$button>
+	<$action-sendmessage $message="tm-new-tiddler" title="xxx" text="" tags="B站直播 任务" />
+添加新待分享
+</$button>
+	
+<$macrocall $name=table-dynamic caption="已完成的主题列表" filter="[tag[B站直播]!tag[任务]]" fields="title tags video-link" class="w-100"/>
+
+<$button>
+	<$action-sendmessage $message="tm-new-tiddler" title="xxx" text="" video-link=""  tags="B站直播 done" />
+添加已完成的直播分享
+</$button>
+
+* 上面内容里，有些是已有条目，在直播时分享了。便不添加done的标签，只加上`b站直播`的标签。当然也能够正常筛选出来。
+* 上面只是列出了常见的直播内容链接，有部分内容没有列出可去[林一二的b站空间](https://space.bilibili.com/437823/)里查看。

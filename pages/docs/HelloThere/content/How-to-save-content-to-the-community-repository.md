@@ -6,3 +6,4 @@ title: 如何保存内容到社区仓库里
 
 如果你希望贡献内容到社区 Github 知识仓库里，请点击链接跟随[我们 Github 仓库里的几步操作](https://github.com/tiddly-gittly/TiddlyWiki-Chinese-Tutorial#%E8%B4%A1%E7%8C%AE%E5%86%85%E5%AE%B9)，以获得更新权限。
 
+直接找[林一二](#%E6%9E%97%E4%B8%80%E4%BA%8C)申请通过就可以了。

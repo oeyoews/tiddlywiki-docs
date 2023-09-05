@@ -8,6 +8,12 @@ title: TidGi太记
 
 TidGi 是 TiddlyWiki + Git 的缩写简称，因为太记除了可以启动太微以外，还能自动进行 Git 细粒度同步备份，在备份的同时节省硬盘空间。
 
+## 官网
+
+[tidgi.fun - 太记部署](https://tidgi.fun/)，但服务器可能不稳定。
+
+如果上面的挂了，也可访问[太记官网 - Github Pages 部署](https://tiddly-gittly.github.io/TidGi-Official-Website/#:Index)
+
 ## 使用
 
 [img[TiddlyGit-Screenshot.png]]

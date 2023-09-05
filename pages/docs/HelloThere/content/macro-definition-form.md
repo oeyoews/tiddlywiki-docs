@@ -1,0 +1,16 @@
+---
+title: 宏定义表格
+---
+
+【卡片集】
+
+* Author：Stephen
+* 描述：这是一个用宏自定义的自动表格，当条目中钉上特定的标签时会自动收集到这个表格中，同时如果条目中有字段，那么字段的内容也会出现在表格中。[My Table.json](#My%20Table.json)文件包含了作者对这个宏的说明，是一系列条目文件的集合，需要保存到本地然后拖放文件到wiki中，导入其中的条目。感兴趣可以看看。
+* 使用方法：拖放[宏自动表格](#%E5%AE%8F%E8%87%AA%E5%8A%A8%E8%A1%A8%E6%A0%BC)条目到你的wiki中。在条目中钉上`表格字段`标签会自动在这个表格中增加一行。你可以自定义[宏自动表格](#%E5%AE%8F%E8%87%AA%E5%8A%A8%E8%A1%A8%E6%A0%BC)条目的filtertag字段，修改成你需要的标签名。
+
+
+
+
+<$let selected-tiddler="宏自动表格">
+	<$macrocall $name="code" language="html" src={{{[<selected-tiddler>get[text]]}}} caption={{{[<selected-tiddler>get[title]]}}} />
+</$let>

@@ -1,0 +1,24 @@
+---
+title: 插件库列表
+---
+
+# 插件库	
+
+<<alert-leftbar secondary "Chinese Community Plugin太微中文社区插件源<br><br>
+
+太微中文社区插件源是由太微(TiddlyWiki)中文社区维护的、致力于搜集网络上所有与 TiddlyWiki5 有关插件的、希望为中国以及全世界的太微用户提供一键安装、更新插件体验的公开插件源。">>
+
+*  [Chinese Community Plugin](https://tw-cpl.netlify.app/)
+*  [Kookma Plugin Library](https://kookma.github.io/TW-PluginLibrary/library/index.html)
+*  [tobibeer](http://tobibeer.github.io/tw5-plugins/#Welcome)
+*  [Relink Library](https://flibbles.github.io/tw5-relink/library/index.html)
+*  [Wikilabs Library (latest)](https://wikilabs.github.io/editions/pluginlibraryWL/library/latest/index.html)
+
+
+
+**Gatha**（创建TiddlyWiki插件）、按钮类。可以创建插件，demo，备份，强烈推荐学习。
+
+* <https://talk.tiddlywiki.org/t/gatha-plugin-experimental-release/2272>
+* <https://kookma.github.io/TW-Gatha/>
+
+<<alert-leftbar warning "插件要尤为注意插件之间的依赖关系。在太记里通常会因为没有安装适当的依赖插件，而导致报错无法正常打开wiki。">>

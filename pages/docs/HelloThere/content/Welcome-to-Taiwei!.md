@@ -2,28 +2,35 @@
 title: 欢迎来到太微！
 ---
 
+class: autonumhead
+created: 20210902044836979
+creator: 林一二
+icon: 🎉
+list: 太微背景介绍 幻灯片 如何保存 基础知识 高级知识 自动化 排查问题 资源链接 插件开发 插件使用 笔记思维 社区建设 徽章列表 使太微更易用 问题以及想法 欢迎来到太微！
+modified: 20230904042250782
+modifier: 马不前
 page-cover: <https://pic4.zhimg.com/v2-881f391ae052f85939fcfeb40bc2056c>
-tags: 欢迎来到太微！
 title: 欢迎来到太微！
 type: text/vnd.tiddlywiki
 
 {{徽章列表}}
+{{$:/config/oeyoews/info}}
 
-{{$:/config/switch tip}}
+{{Gallary}}
 
 ## 如何浏览此知识库
-
 
 1. 可以翻阅右边的[文档目录](TW-Locator例子：当前知识库的目录)，注意查看[文档目录的使用帮助]($:/plugins/linonetwo/itonnote/Help/TW-Locator基于标签生成的文件夹目录结构使用方法)
 1. 查看每个[条目](#%E6%9D%A1%E7%9B%AE)底部的[反向链接](#%E5%8F%8D%E5%90%91%E9%93%BE%E6%8E%A5)
 1. 点击右边栏上的 {{$:/core/ui/Buttons/CommandPalette}} 按钮来打开搜索框（或直接点击 {{$:/core/ui/Buttons/CommandPalette}} ！）
-1. 还是找不到的话可以到[资源链接](#%E8%B5%84%E6%BA%90%E9%93%BE%E6%8E%A5)里在其它社区资源里搜索~
 
 ## 如何开始使用太微
 
 1. 查看[如何保存](#%E5%A6%82%E4%BD%95%E4%BF%9D%E5%AD%98)来下载相关应用程序，创建你自己的知识库。
-1. 在网页上直接修改此知识库试试，放心，[你不会真正修改到我们数据库里的内容](如何保存内容到社区仓库里)。
-1. 访问 [ext[可离线版本|/offline.html]] 可以让你点击侧边栏上的下载按钮把网页下载为单个HTML文件离线阅读
+1. 访问 [ext[可离线版本|/offline.html]] 可以让你点击侧边栏上的下载按钮__把网页下载为单个HTML文件__离线阅读。也可以在网页上直接修改此知识库试试，放心，[你不会真正修改到我们数据库里的内容](如何保存内容到社区仓库里)。
+1. 对TiddlyWiki进行功能分级，大概可以分成四个方面：[开发框架/知识管理操作系统](太微与太记的区别) > [插件开发]] > [[Wiki编程](Wiki编程的定义) > [WikiText笔记与写作](WikiText笔记与写作（进一步的可能）)。
+1. 你可以在[资源链接]]里找到''其它社区资源链接''、[[TiddlyWiki教程](教程链接)、[知识链接](知识链)与正在使用的[个人太微Wiki示例](TiddlyWiki中文网站示例)，还有常用的[插件介绍](插件列表)（包括TidGi预制插件）、一份__TiddlyWiki游戏__和[TiddlyWiki的全平台软件](全平台软件和存储方式)以及工作流程。
+
 
 ## 背景介绍
 
@@ -39,4 +46,7 @@ type: text/vnd.tiddlywiki
 
 <<reuse-tiddler "社区建设">>
 
-<<reuse-tiddler "homepage footer">>
+
+[中文教程最近更新动态](最近更新状态)
+
+

@@ -1,0 +1,7 @@
+---
+title: 人生意义“生き甲斐”是什么？意义之塔插件介绍
+---
+
+video-link: <https://www.bilibili.com/video/BV1Tm4y1471B>
+
+用到了[意义之塔插件](https://tiddly-gittly.github.io/intention-tower-knowledge-graph/)。并见另一个视频[意义之塔插件如何管理你的人生意义](https://www.bilibili.com/video/BV17h4y1Z7hy)。两个视频是讲同一个插件，便不再新建一个条目展示。

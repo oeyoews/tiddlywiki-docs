@@ -1,0 +1,15 @@
+---
+title: TW-Commander：批量操作条目
+---
+
+太微中校是一个批量操作条目的工具。[Github](https://github.com/kookma/TW-Commander) [文档](https://kookma.github.io/TW-Commander/)
+
+## 案例
+
+### 想问一下群里大佬一个问题，我要批量删除所有条目中的tmap.id这个属性该怎样做？
+
+> 可以用 tw commander，配合 [all[tiddlers+shadows]has[tmap.id]] 筛选器 ，从字段里全部删除。
+
+### 有没有办法给所有的tiddler批量添加标签，或者在筛选中选择添加？
+
+> 可以用 tw commander，配合筛选器 ，然后使用 add tag 功能。

@@ -1,0 +1,20 @@
+---
+title: 标签多栏选择
+---
+
+【卡片集】
+
+* Author：马不前，TiddlyWiki XP
+* 描述：添加标签时的下拉列表由单栏变成多栏。
+* 使用方法：复制内容到你的wiki，然后打上注明的标签。
+
+
+
+```
+依赖插件：无
+标签：`$:/tags/Stylesheet`
+```
+
+<$let selected-tiddler="Multi-column-dropdown">
+	<$macrocall $name="code" language={{{[<selected-tiddler>get[type]]}}} src={{{[<selected-tiddler>get[text]]}}} caption={{{[<selected-tiddler>get[title]]}}} />
+</$let>

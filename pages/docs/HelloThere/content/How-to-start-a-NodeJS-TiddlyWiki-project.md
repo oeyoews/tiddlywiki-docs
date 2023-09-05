@@ -34,3 +34,16 @@ Error: listen EADDRINUSE: address already in use 127.0.0.1:8080
 ```
 
 就说明`8080`号端口已经被占用，随便换几个试试，将`--listen port=8080`里面的`8080`换成`8081`什么的试试。
+
+对于HTMLWiki执行解压后的文件夹wiki，你可以使用这条命令：
+
+```shell
+tiddlywiki +plugins/tiddlywiki/filesystem +plugins/tiddlywiki/tiddlyweb ./你的wiki文件夹目录 --listen port=8080（自定义且没有被占用的端口）
+```
+
+## 其他社区教程
+
+1. [林一二 在手机上运行太微nodejs博客](https://wiki.onetwo.ren/%E5%9C%A8%E6%89%8B%E6%9C%BA%E4%B8%8A%E8%BF%90%E8%A1%8C%E5%A4%AA%E5%BE%AEnodejs%E5%8D%9A%E5%AE%A2) （真的是手机上运行的，所以打开比较慢，多等等）
+1. [Pimgeek 如何构建基于 Node.js 的 TiddlyWiki 服务器版网站？](https://pimgeek.com/notes/how-to-build-a-nodejs-based-tiddlywiki-website)
+1. [Vincent 基于Node.js的TiddlyWiki服务器版安装过程记录](https://zhuanlan.zhihu.com/p/483246958)
+1. [zm 在服务器上部署一个基于 Node.js 的 TiddlyWiki](https://jefftay.com/%E5%9C%A8%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E9%83%A8%E7%BD%B2%E4%B8%80%E4%B8%AA%E5%9F%BA%E4%BA%8E%20Node.js%20%E7%9A%84%20TiddlyWiki)

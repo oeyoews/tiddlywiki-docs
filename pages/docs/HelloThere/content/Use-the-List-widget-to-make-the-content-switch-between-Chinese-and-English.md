@@ -1,0 +1,45 @@
+---
+title: 使用List微件让内容可以切换中英文
+---
+
+## 单行
+
+例如[ext[Modern.TiddlyDev|<https://github.com/tiddly-gittly/Modern.TiddlyDev>]]框架里副标题的例子：
+
+```tw5
+<$list filter="[[$:/language]get[text]removeprefix[$:/languages/]else[en-GB]]" variable="lang"><$list filter="[<lang>search[zh]]">现代太微插件开发框架</$list><$list filter="[<lang>!search[zh]]">Modern ~TiddlyWiki  plugin developing framework</$list></$list>
+```
+
+## 多行
+
+你可以将你的一个条目拆成三个条目，例如 `readme` 拆出额外的两个 `readme/zh-Hans` 和 `readme/en-GB`，然后用类似上面的方法来切换
+
+```tw5
+title: readme
+
+<$list filter="[[$:/language]get[text]removeprefix[$:/languages/]else[en-GB]]" variable="lang">
+
+	<$list filter="[<lang>search[zh]]">
+
+		{{readme/zh-Hans}}
+
+	</$list>
+
+	<$list filter="[<lang>!search[zh]]">
+
+		{{readme/en-GB}}
+
+	</$list>
+
+</$list>
+```
+
+注意之间要有空行，''不能''写成：
+
+```tw5
+	<$list filter="[<lang>search[zh]]">
+		{{readme/zh-Hans}}
+	</$list>
+```
+
+不然会让[嵌入内容挤成一团](#%E5%B5%8C%E5%85%A5%E5%86%85%E5%AE%B9%E6%8C%A4%E6%88%90%E4%B8%80%E5%9B%A2)。

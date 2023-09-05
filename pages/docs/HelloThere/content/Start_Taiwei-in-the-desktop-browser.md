@@ -10,7 +10,7 @@ TiddlyStow（创建）、Timimi（回写保存文件）、 FSA Uploader（太微
 **使用方式：**
 
 1. 创建一个文件夹存储所有的TiddlyWiki文档，这个文件夹可以当做太微文件列表，然后使用Kopia定时备份这个文件夹，Timimi回写文件数据，Tiddlystow用已有的太微模板新建太微。
-1. 像Word文档一样使用，你可以使用[TiddlyStow](https://twpub-book.netlify.app/tiddlystow.html)中的TiddlyWiki模板快速地创建太微文档并开始记录内容。
+1. 像Word文档一样使用，你可以使用[TiddlyStow](https://twpub-book.netlify.app/tiddlystow.html)中的TiddlyWiki模板创建太微文档并开始记录内容。
 
 ## TiddlyWiki开始，使用TiddlyStow创建或保存你TiddlyWiki文档
 

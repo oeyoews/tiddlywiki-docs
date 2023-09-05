@@ -1,0 +1,11 @@
+---
+title: 懒加载效果如何？
+---
+
+最新版本的太记已经适配了懒加载，但好像效果不是特别好。而且会清除个人自定义的级联和字体。具体可见[issue](https://github.com/Jermolene/TiddlyWiki5/issues/7502)。
+
+懒加载也称延迟加载，具体可见[文档](https://bramchen.github.io/tw5-docs/zh-Hans/#LazyLoading)。
+
+或者懒加载未来会改善太微的性能。
+
+补充：懒加载性能还可以，近两万条目加载起来，会比原来快很多，较少有卡顿感。

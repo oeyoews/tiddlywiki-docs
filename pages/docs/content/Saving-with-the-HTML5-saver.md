@@ -1,0 +1,20 @@
+---
+title: 'Download Saver'
+---
+
+如果未安装其他方法，这是默认保存方法。它使用浏览器的内置的"下载文件"处理程序，并且具有几乎在所有桌面浏览器和许多行动浏览器上运行的优势。
+
+1. 点击下列按钮[下载](Download)一个空白的 ~TiddlyWiki：
+#> {{$:/editions/zh-Hant/snippets/download-empty-button}} {{$:/editions/zh-Hans/snippets/download-empty-button}}
+#> 若此按钮无效，请另存此链接：<https://tiddlywiki.com/empty.html>
+#> 在运行下载前，您的浏览器可能会要您允许此下载
+1. 找到你刚才下载的文件
+    * 您可以重命名该文件，但其扩展名必须是 `.html` 或 `.htm`
+1. 于您的浏览器中打开该文件
+1. 点击侧边栏的<<.icon $:/core/images/new-button>>''添加''按钮，尝试创建新条目。为此条目输入一些内容，然后点击<<.icon $:/core/images/done-button>>''确定''按钮
+1. 点击侧边栏的<<.icon $:/core/images/save-button-dynamic>>''保存变更''按钮保存您的更改
+1. 您的浏览器将下载一份结合您更动的维基副本
+1. 找到你刚才下载的文件，并于您的浏览器中打开该文件
+1. 检测确认您的更改已正确保存
+
+**提示**: 大部分的浏览器会有可设置的''每次都问我要下载到何处''的选项，这允许您选择已存在的文件版本并取代覆写之。

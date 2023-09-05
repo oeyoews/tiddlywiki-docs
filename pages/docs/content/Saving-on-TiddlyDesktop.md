@@ -1,0 +1,21 @@
+---
+title: 'TiddlyDesktop'
+---
+
+community-author: Jeremy Ruston
+created: 20171112085137764
+delivery: App
+description: 用于 TiddlyWiki 的自定义桌面应用程序
+method: save
+modified: 20220515020129820
+tags: Saving Mac Windows Linux [Standalone App](#Standalone%20App)
+title: Saving on TiddlyDesktop
+type: text/vnd.tiddlywiki
+url: <https://github.com/TiddlyWiki/TiddlyDesktop>
+
+见 [Introducing TiddlyDesktop Video](#Introducing%20TiddlyDesktop%20Video)
+
+1. 从 <https://github.com/TiddlyWiki/TiddlyDesktop> 安装最新版本的 TiddlyDesktop 
+1. 运行 TiddlyDesktop
+1. 使用浏览按钮可以打开 TiddlyWiki 文件
+1. 于 TiddlyWiki 以平常方式保存变更

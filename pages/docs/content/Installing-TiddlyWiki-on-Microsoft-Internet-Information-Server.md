@@ -1,0 +1,61 @@
+---
+title: 'Internet Information Services'
+---
+
+\define example-file(title)
+<$transclude tiddler="$title$" mode="block"/> <$macrocall $name="copy-to-clipboard" src={{$title$}}/>
+\end
+
+Microsoft 的 [Internet Information Server](https://en.wikipedia.org/wiki/Internet_Information_Services) (IIS) 是 Windows 的内置网页服务器。为了利用 IIS 功能 (如 URL 重写、静态档托管和崩溃后的自动重新开机)，有助于在 IIS 中托管 TiddlyWiki。
+
+# 1. 激活 IIS
+
+1. 在 Windows 中，请访问控制台，然后点击 **添加或移除程序**
+1. 在 **添加或移除程序** 窗口中，点击 **添加/移除 Windows 组件**.
+1. 勾选 **Internet Information Services (IIS)** 核取方块
+1. 点击 **下一步**，然后点击 **完成**
+
+# 2. 安装所需的工具
+
+1. 从 <https://www.iis.net/downloads/microsoft/httpplatformhandler> 安装 IIS 模块 ~HttpPlatformHandler
+1. 从 <https://nodejs.org/> 安装 [Node.js](#Node.js)
+1. 从 <https://git-scm.com/> 安装 Git
+    * _可选的；只有使用最新版的 TiddlyWiki 时，才需直接从 ~GitHub 拉取 - 见下文_
+
+# 3. 安装 TiddlyWiki 并设置一个新维基
+
+1. 为维基创建一个合适的目录 (例如，`C:\MyStuff`)
+1. 在其中创建一个名为 `C:\MyStuff\package.json` 的文件，内容如下:
+#> <<example-file "Example package.json for IIS">>
+1. 同时创建一个名为 `C:\MyStuff\web.config` 的文件，内容如下:
+#> <<example-file "Example web.config for IIS">>
+1. 创建一个名为 "wiki" 的子目录 (即 `C:\MyStuff\wiki`)
+1. 创建一个名为 `C:\MyStuff\wiki\tiddlywiki.info` 的文件，内容如下:
+#> <<example-file "Example tiddlywiki.info for IIS">>
+1. 创建一个，名为 "tiddlers" 的子目录 (即 `C:\MyStuff\wiki\tiddlers`)
+1. 在其中创建一个名为 `C:\MyStuff\wiki\tiddlers\config-tiddlyweb-host.tid` 的文件，内容如下:
+#> <<example-file "Example config-tiddlyweb-host for IIS">>
+    * (有关 ~HttpPlatformHandler 配置字段的详细信息，请参考[微软的文档](https://docs.microsoft.com/en-us/iis/extensions/httpplatformhandler/httpplatformhandler-configuration-reference)
+1. 在 `C:/MyStuff` 目录下运行 `npm install` 命令
+
+# 4. 在 IIS 中设置应用程序
+
+* 在 Windows 中，运行 IIS 管理程序 (使用 "开始" 功能表运行 `inetmgr.exe`)
+* 在左侧的 **连接** 栏中找到该服务器，然后按一下 "显示三角形" 显示其内容 *
+* 打开 "网站" 文件夹
+* 在''默认网站''项目点击右键，然后从功能表中选择''添加应用程序''。
+* 在对话框中输入以下信息:
+    1. **Alias**: `MyApp`
+    1. **Physical path**: `C:\MyStuff`
+* 点击 **确定**
+
+# 5. 测试应用程序
+
+在浏览器中访问 <http://localhost/MyApp/> 来测试应用程序。
+
+# 注意事项
+
+* 如果需要身份验证，请在 `web.config` 中的 `--listen` 命令中指定用户名和密码。例如:
+    * <<example-file "Example web.config - arguments for IIS">>
+    * 注意在非字母、数字的密码前后，需使用双引号, 并将其 HTML 编码为 `&quot;`
+* 如果更改了 `web.config` 档中的设置，或者修改了应用程序代码，则需要使用 IIS 管理程序，重新启动服务器

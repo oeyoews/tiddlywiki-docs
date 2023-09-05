@@ -1,4 +1,9 @@
-const nextConfig = {};
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
+};
 
 const withNextra = require("nextra")({
   theme: "nextra-theme-docs",

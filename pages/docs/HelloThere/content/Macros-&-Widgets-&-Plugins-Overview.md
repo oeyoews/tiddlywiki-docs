@@ -1,0 +1,136 @@
+---
+title: 宏与微件及插件概述
+---
+
+
+
+# 一、宏
+
+## 宏调用
+
+
+宏本身是一些文本片段（比如`<<colour code-border>>`宏文本片段）。它包含宏名称、参数名称、参数。使用尖括号嵌入宏，这种嵌入方式被称为 **调用宏**。
+
+[宏调用语法](https://bramchen.github.io/tw5-docs/zh-Hans/#Macro%20Call%20Syntax)：`<<两个尖括号>>`。
+
+```
+变量的使用：<<名称 空格 参数值>>
+每个参数值的语法：参数名称 空格 : 空格 参数值 空格
+
+```
+
+
+
+<br><br>
+
+> **list-links 宏（示例）**
+> 
+> 此示例列出名称开头为 J 的所有条目：
+> 
+> ```
+> <<list-links filter:"[prefix[J]]">>
+> ```
+> 
+> 显示结果：
+> 
+> <<list-links filter:"[prefix[J]]">>
+> 
+> 说明：list-links是宏的名称，filter是名称为筛选器的参数名称，后面跟的字符串是参数值，其中的prefix是筛选器操作符，J 是筛选器参数。参数值[prefix[J]]的意思是筛选出名称开头为J的所有条目。
+> 
+> 所以list-links宏的意图是列出链接并使用filter设置筛选范围，范围限定在"[prefix[J]]"。
+
+<br><br>
+
+[更多的宏](https://bramchen.github.io/tw5-docs/zh-Hans/#Core%20Macros)：`<<tag>>`（标签宏）、`<<tabs>>`（选项卡宏）、`<<timeline>>`（时间线宏）、`<<now YYYY年0MM月0DD日>>`（当前时间宏）、`<<tree>>`(树状视图宏)、`<<thumbnail>>`（可链接缩略图宏）、`<<Table-of-Contents Macros>>`（目录宏）、`<<toc>>`等等非常有用的宏。
+
+## 宏定义
+
+如果你知道一个宏的名字，那可以通过高级搜索-默认条目找到这个宏的定义条目。
+
+一个宏是用一个 \define 编译指令定义的。像所有编译指令一样，这只能出现在条目的开始。（字面意义上的，如果前面有普通文本内容（不是宏定义），调用宏将会失效）
+
+```
+\define 宏名称(tag,sort:"",参数名列表)
+<$微件></$微件>
+\end
+```
+
+
+宏可以对很多小工具进行封装以达到某个特定的功能，解决我们的问题。即站在实用的角度来看插件里有多个宏，宏里提供微件被使用；
+
+最好的例子：在`$:/core/macros/toc`系统条目中，搜索toc-selective-expandable关键词可以找到该宏的完整定义。
+
+
+[img[toc-selective-expandable宏定义.png]]
+
+
+[宏定义详细链接(包含访问变量、参数、范围以及更多详细的描述)](https://bramchen.github.io/tw5-docs/zh-Hans/#Macro%20Definitions%20in%20WikiText)
+
+
+<br><br>
+我们对宏的总结是这样的：
+
+* 宏是对微件的调用，自动化地复用内容的；
+
+* 宏可以封装 WikiText 的重复片段（例如timeline时间线宏可以将已有的条目按照时间创建先后顺序显示出来），以便您可以轻松地重复使用它们。
+
+比如在条目中嵌入目录（目录宏），并且指定sort参数名对目录排序.例如
+
+```
+<<toc-selective-expandable '目录' sort : "sortan[]">>
+```
+
+# 二、微件Widget小工具
+
+微件（[小工具](https://bramchen.github.io/tw5-docs/zh-Hans/#Widgets)）是页面渲染的基本组成部分。即页面可见的部分。比如列表微件、标题微件、链接微件、按钮微件。
+
+> 按钮微件的例子：`<$button message="tm-navigate" to="HelloThere">打开 ~HelloThere</$button>`（复制此文本片段并保存到新的条目中将会生成一个【打开 HelloThere】按钮，点击按钮将会打开标题为HelloThere的条目。）
+
+微件的使用语法：
+
+```
+<$xxx>特殊的HTML标签</xxx>
+```
+
+说明：小工具提供 WikiText 更丰富的功能。它们与 HTML 元素 使用相同的标记方式，但是标记的名称前包含一个 $ 符号。
+
+
+就像HTML标签一样，它们也可以拥有自己的属性。比如上述Button微件它自己的to属性以及"HelloThere"属性值。
+
+
+[维基文本中的小工具](https://bramchen.github.io/tw5-docs/zh-Hans/#Widgets%20in%20WikiText)：action、button、set、browse等等。大概64个小工具。
+
+
+
+
+
+# 三、插件
+
+一个插件就是一组条目的集合，它将众多相互关联的为实现特定功能的条目封装在一起，成为一个以 $:/ 开头的系统条目。
+
+
+## 将用户配置封装为插件
+
+把一些常用的设置都放到一个插件里，以插件的形式加载存储。便于携带和安装。
+
+使用[Gatha](https://talk.tiddlywiki.org/t/gatha-plugin-experimental-release/2272)插件，可以直接在任何Wiki里把一些条目打包成插件。它也可以管理做到一半的插件的草稿。
+
+Gatha：<https://talk.tiddlywiki.org/t/gatha-plugin-experimental-release/2272>
+
+
+<br><br>
+
+## 几个有趣的插件
+公式插件：<http://chronicles.wiki/TiddlyWikiFormula/>
+
+在底部显示annotation的功能插件,Refnotes：<https://kookma.github.io/TW-Refnotes/>
+
+<http://newtids.tiddlyspot.com/>，这个挺好用，如果你有一个列表title,想快速创建所有列表文本的tid用这个很爽。
+
+
+<http://tw-tables.tiddlyspot.com/还有这个>，这个是一个搜索和表格结合的示例，可以参考，我就是按他这个，把它里面的表格改成shiraz的，他这个用的是老版本的shiraz表格，如果用得用新表格的宏。
+
+[img[shiraz动态表格.jpg]]
+
+可以联动放到一个页面或者放侧边栏，跟有样式的列表和表格联动，我倾向于放在侧边栏。而且保留一些常用的筛选器放在侧边会很方便。
+

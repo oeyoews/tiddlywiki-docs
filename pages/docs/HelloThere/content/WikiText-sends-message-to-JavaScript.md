@@ -1,0 +1,59 @@
+---
+title: WikiText发送消息给JavaScript
+---
+
+## JS侧注册消息
+
+```js
+
+interface IEvent {
+	widget: TWWidget;
+	/** 也就是 addEventListener 的第一个字段 */
+	type: string;
+	/** 可以随意带上别的信息 */
+	[others: string]: unknown;
+}
+
+// @ts-expect-error ts-migrate(2304) FIXME: Cannot find name '$tw'.
+$tw.rootWidget.addEventListener('open-command-palette', (e: IEvent) => this.openPalette(e));
+```
+
+这是注册一个事件名到 [widgets/widget.js Widget.prototype.addEventListener](https://github.com/Jermolene/TiddlyWiki5/blob/3094e062366830bdecfb91e3d852667fa951dc50/core/modules/widgets/widget.js#L439) 上。
+
+根据 [widgets/widget.js Widget.prototype.dispatchEvent](https://github.com/Jermolene/TiddlyWiki5/blob/3094e062366830bdecfb91e3d852667fa951dc50/core/modules/widgets/widget.js#L455)，这个 event 可以不是继承自其它 JS 事件，而只是需要有一些特定的字段即可。
+
+其余字段如 `param` 的来源可见 [widgets/action-sendmessage.js SendMessageWidget.prototype.invokeAction](https://github.com/Jermolene/TiddlyWiki5/blob/ac022ec79f05715f62fd8382ebb6b49cd1c8f960/core/modules/widgets/action-sendmessage.js#L76)。
+
+## WikiText侧发送消息
+
+```html
+<$action-sendmessage $message="open-command-palette" $param=">"/>
+```
+
+`param` 会被 `SendMessageWidget.prototype.invokeAction` 放入 event 里。
+
+### 用快捷键发送消息
+
+```tw
+key: ((open-command-palette-command-mode))
+tags: $:/tags/KeyboardShortcut
+title: $:/plugins/linonetwo/commandpalette/CommandPaletteCommandMode
+type: text/vnd.tiddlywiki
+
+<$action-sendmessage $message="open-command-palette" $param=">"/>
+```
+
+```tw
+title: $:/config/shortcuts/open-command-palette-command-mode
+type: text/vnd.tiddlywiki
+
+ctrl-shift-P
+```
+
+```tw
+tags:
+title: $:/config/ShortcutInfo/open-command-palette-command-mode
+type: text/vnd.tiddlywiki
+
+Open the command palette in command mode
+```

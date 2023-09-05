@@ -1,0 +1,30 @@
+---
+title: 快速创建新笔记按钮
+---
+
+<fieldset>
+	<legend>快速添加</legend>
+
+	<$button>
+		<$action-sendmessage $message="tm-new-tiddler" title="xxx" text="""<$macrocall $name="locator-view" baseTitle=<<currentTiddler>> />""" tags="欢迎来到太微！" />
+	添加新类别
+	</$button>
+
+	<$button>
+		<$action-sendmessage $message="tm-new-tiddler" title="xxx" tags="基础知识" text="!! " />
+	添加新基础知识
+	</$button>
+	
+	<$button>
+		<$action-sendmessage $message="tm-new-tiddler" title="xxx" tags="插件使用" text="!! " />
+	添加新插件使用教程
+	</$button>
+	
+	<$button>
+		<$action-sendmessage $message="tm-new-tiddler" title="新任务" tags="任务" text="" />
+	添加社区共建待办
+	</$button>
+
+</fieldset>
+
+此外，你还可以先找到想作为文件夹的笔记，然后使用笔记顶部的 {{$:/core/images/new-here-button}} {{$:/language/Buttons/NewHere/Caption}} 来创建新笔记。这将把新笔记放入文件夹内，文件夹系统的原理详见[TW-Locator](#TW-Locator)。

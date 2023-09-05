@@ -1,0 +1,34 @@
+---
+title: 插件开发
+---
+
+page-cover: <https://tiddlywiki.com/talkytalky/images/TiddlyWiki%2520Architecture.svg>
+tags: 欢迎来到太微！
+title: 插件开发
+type: text/vnd.tiddlywiki
+
+## 学习方法
+
+### WikiText 插件
+
+只需要通读[中文文档]]了解所有 WikiText 语法即可，然后推荐使用[[Gatha插件来开发](如何在单文件版里写一个TW插件)。
+
+### JS 高级插件
+
+因为太微本身的 API 文档不完善，而且没有原生的 TS 类型。所以目前的学习主要靠阅读其它插件的代码，来了解写法。
+
+小伙伴们也在把 API 用法整理到[TW5-Typed](https://github.com/tiddly-gittly/TW5-Typed)里，方便使用 TS 开发 JS 插件。
+
+### 值得一读的插件
+
+* 操作编辑器
+    * [Gk0Wk/TW5-CodeMirror-Enhanced](https://github.com/Gk0Wk/TW5-CodeMirror-Enhanced)
+* 操作事件
+    * [Souk21/TW-commandpalette](https://github.com/tiddly-gittly/tiddlywiki-plugins/tree/master/src/commandpalette)
+
+## 相关阅读
+
+以下社区成员写的写的文档如果是英文版看不懂，用浏览器翻译（例如Google翻译）插件右键翻译网页即可。
+
+1. [<https://github.com/kewapo/The-Book-Wiki>]] 是[[The-Tiddlywiki-Manual](https://github.com/kewapo/The-Tiddlywiki-Manual)的完整版，讲解了插件开发者需要了解的很多知识。
+1. [Grok TiddlyWiki](https://groktiddlywiki.com/read/)是详尽有步骤的太微学习手册

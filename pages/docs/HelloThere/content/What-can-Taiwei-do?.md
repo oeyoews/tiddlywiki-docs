@@ -1,0 +1,11 @@
+---
+title: 太微能做什么
+---
+
+太微非常强大，且不需要任何服务器和数据库知识就可以实现高度定制和私有部署，但可惜由于在国内没有活跃的社区，所以太微的爱好者们往往因此对太微“望而生畏”，''这也是我们建立这个教程网站的原因：做好「太微」本土化的“指路人”、“搬运工”和交流平台''，并为国内的TW开发者提供好开发思路和开发社区。
+
+> **您曾感觉人类的大脑是有极限的吗？感觉它不足以容纳一切你需要记住的事？**
+> 
+> 欢迎使用 [TiddlyWiki](太微)，一个独特的[非线性](https://bramchen.github.io/tw5-docs/zh-Hans/#Philosophy%20of%20Tiddlers)笔记本，用于[截取](https://bramchen.github.io/tw5-docs/zh-Hans/#Creating and editing tiddlers)、[管理](https://bramchen.github.io/tw5-docs/zh-Hans/#Structuring TiddlyWiki)和[复用](https://bramchen.github.io/tw5-docs/zh-Hans/#Sharing your tiddlers with others)复杂的信息。
+> 
+> 用它来保留您的[待办清单](https://bramchen.github.io/tw5-docs/zh-Hans/#TaskManagementExample)、计划一篇[散文或一部小说](https://bramchen.github.io/tw5-docs/zh-Hans/#%22TiddlyWiki%20for%20Scholars%22%20by%20Alberto%20Molina)、或安排您的婚礼。记录每个闪过您脑中的想法，或创建一个灵活和反应迅速的网站。

@@ -1,0 +1,38 @@
+---
+title: 添加css样式
+---
+
+有三种办法修改样式
+
+## 安装新的主题插件
+
+这是最适合新手入门的方式，刚入门的同学没必要去学习 CSS 等高级知识，只需要安装主题插件即可，等遇到问题了再去深入学习。
+
+不过 CSS 是一个通用技能，和 Python 一样，都是学了到处都可以使用的好知识，学了不吃亏不上当。国际官方学习地址：[MDN-CSS — 设计 Web](https://developer.mozilla.org/zh-CN/docs/Learn/CSS)
+
+## 添加局部样式
+
+详见[中文文档-样式及 CSS 类别](https://bramchen.github.io/tw5-docs/zh-Hans/#Styles%20and%20Classes%20in%20WikiText)，来使用 `@@` 这种[区块解析器](https://bramchen.github.io/tw5-docs/zh-Hans/#Block%20Mode%20WikiText)。
+
+参考<http://listtree.tiddlyspot.com/>，用 `@@.list-tree` 的语法，给 `@@` 包住的列表加上了自定义的 css 样式，让列表变成了树形图。
+
+```
+@@.list-tree
+*Parent 1
+*Parent 2
+**Child 1
+*[[Parent 3]] (incidentally a link)
+@@
+```
+
+## 修改全局样式
+
+参考[使用样式表](https://bramchen.github.io/tw5-docs/zh-Hans/#Using%20Stylesheets)，设条目标签为 `$:/tags/Stylesheet`，在里面写的 CSS 就会自动应用到全局样式上，并覆盖别的 css 了。
+
+如果发现由于[CSS优先级](https://developer.mozilla.org/zh-CN/docs/Web/CSS/Specificity)问题难以覆盖，可以使用[!important 例外规则](https://developer.mozilla.org/zh-CN/docs/Web/CSS/Specificity#!important_%E4%BE%8B%E5%A4%96%E8%A7%84%E5%88%99)强行覆盖。
+
+要查找自己的修改有哪些问题，可以参考[调试样式表](https://bramchen.github.io/tw5-docs/zh-Hans/#Debugging%20Stylesheets)。
+
+### 如何把 CSS 应用到界面上自己想修改的地方
+
+<<reuse-tiddler "使用开发者工具查看CSS">>

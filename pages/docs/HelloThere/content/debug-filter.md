@@ -1,0 +1,23 @@
+---
+title: 调试筛选器
+---
+
+## 用清单直接显示
+
+结合 [清单宏](https://bramchen.github.io/tw5-docs/zh-Hans/#ListWidget) 和 [currentTiddler 变量](https://bramchen.github.io/tw5-docs/zh-Hans/#currentTiddler%20Variable)，可以在页面上展示出筛选器表达式的结果。
+
+```tw5
+<$list filter="[{!!title}addprefix[我是前缀哈哈哈]]">
+<<currentTiddler>>
+</$list>
+```
+
+效果如下↓
+
+<$list filter="[{!!title}addprefix[我是前缀哈哈哈]]">
+<<currentTiddler>>
+</$list>
+
+## 用 Log 显示在开发者工具里
+
+[log 微件](https://bramchen.github.io/tw5-docs/zh-Hans/#LogWidget) [使用带调用位置的Log微件](https://talk.tiddlywiki.org/t/set-let-a-word-of-advice/1842/7)
